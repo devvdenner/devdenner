@@ -3,7 +3,17 @@ import { Section } from '@/_shared/components/Section';
 import { Mail, Linkedin, Github } from 'lucide-react';
 import { ContactForm } from './components/ContactForm';
 
-export default function ContactView() {
+interface ContactViewProps {
+    profile: {
+        socials: {
+            email: string;
+            linkedin: string;
+            github: string;
+        }
+    }
+}
+
+export default function ContactView({ profile }: ContactViewProps) {
     return (
         <Section id="contact" className="bg-gradient-to-b from-background to-[#0a101f]">
             <div className="max-w-4xl mx-auto">
@@ -18,18 +28,18 @@ export default function ContactView() {
                 <div className="grid md:grid-cols-2 gap-12 items-start">
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-white">Contatos</h3>
-                        <div className="flex items-center gap-4 text-slate-400 hover:text-primary transition-colors cursor-pointer">
+                        <a href={`mailto:${profile.socials.email}`} className="flex items-center gap-4 text-slate-400 hover:text-primary transition-colors cursor-pointer">
                             <Mail size={20} />
-                            <span>jensen@example.com</span>
-                        </div>
-                        <div className="flex items-center gap-4 text-slate-400 hover:text-primary transition-colors cursor-pointer">
+                            <span>{profile.socials.email}</span>
+                        </a>
+                        <a href={`https://${profile.socials.linkedin}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-slate-400 hover:text-primary transition-colors cursor-pointer">
                             <Linkedin size={20} />
-                            <span>linkedin.com/in/jensen</span>
-                        </div>
-                        <div className="flex items-center gap-4 text-slate-400 hover:text-primary transition-colors cursor-pointer">
+                            <span>{profile.socials.linkedin}</span>
+                        </a>
+                        <a href={`https://${profile.socials.github}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-slate-400 hover:text-primary transition-colors cursor-pointer">
                             <Github size={20} />
-                            <span>github.com/jensen</span>
-                        </div>
+                            <span>{profile.socials.github}</span>
+                        </a>
                     </div>
 
                     <ContactForm />

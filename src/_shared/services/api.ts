@@ -3,34 +3,34 @@
 export const MockAPI = {
     getProfile: async () => {
         return {
-            name: "Jensen Omega",
-            role: "Software Developer",
-            description: "Especialista em criar experiências digitais excepcionais. Foco em interfaces acessíveis, centradas no ser humano e de alta performance.",
+            name: "Denner Nascimento",
+            role: "Desenvolvedor Frontend",
+            description: "Desenvolvedor Frontend com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis com React, Next.js, Vue e TypeScript. Atuo com foco em excelência técnica, colaboração e entregas de alto impacto.",
             socials: {
-                email: "jensen@example.com",
-                linkedin: "linkedin.com/in/jensen",
-                github: "github.com/jensen"
+                email: "contato@devdenner.com",
+                linkedin: "https://www.linkedin.com/in/denner-nascimento/",
+                github: "github.com/datewaker"
             }
         };
     },
 
     getTechStack: async () => {
-        return ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'React', 'Git', 'Tailwind'];
+        return ['React', 'Next.js', 'TypeScript', 'Vue.js', 'Tailwind CSS', 'Node.js', 'Docker', 'Git'];
     },
 
     getServices: async () => {
         return [
-            { icon: 'Layout', title: 'Web Development', desc: 'Sites modernos e responsivos.' },
-            { icon: 'Smartphone', title: 'App Development', desc: 'Aplicações nativas e híbridas.' },
-            { icon: 'Server', title: 'Backend Systems', desc: 'APIs robustas e escaláveis.' }
+            { icon: 'Layout', title: 'Frontend Development', desc: 'Interfaces modernas com React, Next.js e Vue.' },
+            { icon: 'Server', title: 'Arquitetura & Boas Práticas', desc: 'Clean Architecture, MVVM e Testes Automatizados.' },
+            { icon: 'Smartphone', title: 'Mobile & QA', desc: 'React Native, Cypress, Playwright e Vitest.' }
         ];
     },
 
     getStats: async () => {
         return [
-            { value: "120", suffix: "+", label: "Projetos Completos" },
-            { value: "95", suffix: "%", label: "Satisfação Clientes" },
-            { value: "10", suffix: "+", label: "Anos Experiência" }
+            { value: "5", suffix: "+", label: "Anos de Experiência" },
+            { value: "10", suffix: "+", label: "Projetos Entregues" },
+            { value: "3", suffix: "+", label: "Empresas" }
         ];
     },
 
@@ -38,29 +38,29 @@ export const MockAPI = {
         return [
             {
                 id: 1,
-                type: "Web Game",
-                title: "Battleship Estratégico",
-                description: "Uma recriação clássica do jogo Batalha Naval. Lógica complexa de IA para o oponente e gerenciamento de estado avançado.",
-                tech: ["React", "Redux", "Jest"],
-                imagePlaceholder: "Battleship Game",
-                links: { github: "#", external: "#" }
+                type: "Web App",
+                title: "Calculadora de Milhas",
+                description: "Aplicativo web que calcula automaticamente pontos e milhas acumulados com base nos gastos mensais. Utiliza Zustand, TailwindCSS, React Hook Form e Shadcn UI.",
+                tech: ["Next.js", "TypeScript", "Zustand", "Tailwind"],
+                imagePlaceholder: "Calculadora Milhas",
+                links: { github: "#", external: "https://calculadoradasmilhas.com" }
             },
             {
                 id: 2,
-                type: "Integração API",
-                title: "Movie Titles API",
-                description: "Interface de busca de filmes utilizando API pública. Inclui sistema de favoritos, cache local e filtragem dinâmica em tempo real.",
-                tech: ["Vue.js", "Tailwind", "REST API"],
-                imagePlaceholder: "Movie App",
+                type: "Institucional",
+                title: "ARACOMP (UFAL)",
+                description: "Site institucional para o evento acadêmico da Universidade Federal de Alagoas, desenvolvido com Django, Django REST Framework, HTML e SCSS.",
+                tech: ["Django", "Python", "SCSS", "HTML"],
+                imagePlaceholder: "ARACOMP",
                 links: { github: "#", external: "#" }
             },
             {
                 id: 3,
-                type: "Dashboard",
-                title: "SaaS Landing Page",
-                description: "Landing page de alta conversão para um produto SaaS fictício. Focada em métricas de performance (Lighthouse 100%) e SEO.",
-                tech: ["HTML5", "SASS", "JS ES6"],
-                imagePlaceholder: "Dashboard SaaS",
+                type: "SaaS Platform",
+                title: "CDP Platform",
+                description: "Plataforma de gestão de dados de clientes e personalização de mensagens multicanal. Arquitetura modular e hexagonal na camada de serviços.",
+                tech: ["React", "Next.js", "TypeScript", "Styled-components"],
+                imagePlaceholder: "CDP Platform",
                 links: { github: "#", external: "#" }
             }
         ];

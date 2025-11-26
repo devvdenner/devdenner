@@ -20,7 +20,7 @@ export default async function Home() {
       <HomeView profile={profile} techStack={techStack} />
       <AboutView services={services} stats={stats} />
       <ProjectsView projects={projects} />
-      <ContactView />
+      <ContactView profile={profile} />
 
       <Footer />
     </div>
