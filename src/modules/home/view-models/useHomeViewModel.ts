@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IHomeModel } from '../models';
+import { IHomeModel } from '../models/HomeView.model';
 
 export function useHomeViewModel() {
     const [data, setData] = useState<IHomeModel['profile'] | null>(null);

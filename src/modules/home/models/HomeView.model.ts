@@ -8,3 +8,8 @@ export interface IHomeModel {
     profile: IProfileSummary;
     isLoading: boolean;
 }
+
+export interface HomeViewProps {
+    profile: IProfileSummary;
+    techStack: string[];
+}

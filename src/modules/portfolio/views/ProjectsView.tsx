@@ -3,22 +3,7 @@ import { Section } from '@/_shared/components/Section';
 import { Github, ExternalLink, ChevronRight } from 'lucide-react';
 import { cn } from '@/_shared/utils/cn';
 
-interface Project {
-    id: number;
-    type: string;
-    title: string;
-    description: string;
-    tech: string[];
-    imagePlaceholder: string;
-    links: {
-        github: string;
-        external: string;
-    };
-}
-
-interface ProjectsViewProps {
-    projects: Project[];
-}
+import { ProjectsViewProps } from '../models/ProjectsView.model';
 
 export default function ProjectsView({ projects }: ProjectsViewProps) {
     return (

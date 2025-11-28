@@ -3,15 +3,7 @@ import { Section } from '@/_shared/components/Section';
 import { Mail, Linkedin, Github } from 'lucide-react';
 import { ContactForm } from './components/ContactForm';
 
-interface ContactViewProps {
-    profile: {
-        socials: {
-            email: string;
-            linkedin: string;
-            github: string;
-        }
-    }
-}
+import { ContactViewProps } from '../models/ContactView.model';
 
 export default function ContactView({ profile }: ContactViewProps) {
     return (

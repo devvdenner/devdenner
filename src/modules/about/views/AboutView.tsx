@@ -2,22 +2,7 @@ import React from 'react';
 import { Section } from '@/_shared/components/Section';
 import { Layout, Smartphone, Server } from 'lucide-react';
 
-interface Service {
-    icon: string;
-    title: string;
-    desc: string;
-}
-
-interface Stat {
-    value: string;
-    suffix: string;
-    label: string;
-}
-
-interface AboutViewProps {
-    services: Service[];
-    stats: Stat[];
-}
+import { AboutViewProps } from '../models/AboutView.model';
 
 const iconMap: Record<string, React.ReactNode> = {
     'Layout': <Layout size={32} />,
