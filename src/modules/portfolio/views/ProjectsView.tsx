@@ -30,7 +30,7 @@ export default function ProjectsView({ projects }: ProjectsViewProps) {
                                         : "translate-x-2 translate-y-2 group-hover:translate-x-1 group-hover:translate-y-1"
                                 )}></div>
                                 <div className="relative rounded overflow-hidden shadow-2xl bg-surface aspect-video flex items-center justify-center border border-slate-700">
-                                    <span className="text-slate-600 font-mono">Image Preview: {project.imagePlaceholder}</span>
+                                    <img src={project.image} alt={project.imagePlaceholder} className="w-full h-full object-cover" />
                                 </div>
                             </div>
 

@@ -9,7 +9,7 @@ export const MockAPI = {
             socials: {
                 email: "contato@devdenner.com",
                 linkedin: "https://www.linkedin.com/in/denner-nascimento/",
-                github: "github.com/datewaker"
+                github: "github.com/devvdenner"
             }
         };
     },
@@ -42,6 +42,7 @@ export const MockAPI = {
                 title: "Calculadora de Milhas",
                 description: "Aplicativo web que calcula automaticamente pontos e milhas acumulados com base nos gastos mensais. Utiliza Zustand, TailwindCSS, React Hook Form e Shadcn UI.",
                 tech: ["Next.js", "TypeScript", "Zustand", "Tailwind"],
+                image: "https://blog.hubspot.com/hubfs/freerange.png",
                 imagePlaceholder: "Calculadora Milhas",
                 links: { github: "#", external: "https://calculadoradasmilhas.com" }
             },
@@ -51,6 +52,7 @@ export const MockAPI = {
                 title: "ARACOMP (UFAL)",
                 description: "Site institucional para o evento acadêmico da Universidade Federal de Alagoas, desenvolvido com Django, Django REST Framework, HTML e SCSS.",
                 tech: ["Django", "Python", "SCSS", "HTML"],
+                image: "https://blog.hubspot.com/hubfs/freerange.png",
                 imagePlaceholder: "ARACOMP",
                 links: { github: "#", external: "#" }
             },
@@ -60,6 +62,7 @@ export const MockAPI = {
                 title: "CDP Platform",
                 description: "Plataforma de gestão de dados de clientes e personalização de mensagens multicanal. Arquitetura modular e hexagonal na camada de serviços.",
                 tech: ["React", "Next.js", "TypeScript", "Styled-components"],
+                image: "https://blog.hubspot.com/hubfs/freerange.png",
                 imagePlaceholder: "CDP Platform",
                 links: { github: "#", external: "#" }
             }

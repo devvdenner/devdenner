@@ -1,4 +1,5 @@
 export interface Project {
+    image: string | Blob | undefined;
     id: number;
     type: string;
     title: string;
