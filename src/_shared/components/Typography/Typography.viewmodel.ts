@@ -1,3 +1,5 @@
+import { ElementType } from 'react';
+
 import { ITypographyModel } from './Typography.model';
 
 export const useTypographyViewModel = (props: ITypographyModel) => {
@@ -12,7 +14,7 @@ export const useTypographyViewModel = (props: ITypographyModel) => {
       : 'p');
 
   return {
-    Component: Component as React.ElementType,
+    Component: Component as ElementType,
     variant,
     rest,
   };
