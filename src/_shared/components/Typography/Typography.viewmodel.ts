@@ -1,20 +1,14 @@
-import { ElementType } from 'react';
+import { tagMapping } from '@/_shared/constants/tag-mapping';
 
 import { ITypographyModel } from './Typography.model';
 
 export const useTypographyViewModel = (props: ITypographyModel) => {
   const { as, variant, ...rest } = props;
 
-  const Component =
-    as ||
-    (variant
-      ? ['h1', 'h2', 'h3', 'h4', 'p', 'blockquote', 'code'].includes(variant)
-        ? variant
-        : 'p'
-      : 'p');
+  const Component = as || tagMapping[variant as string] || 'p';
 
   return {
-    Component: Component as ElementType,
+    Component,
     variant,
     rest,
   };
