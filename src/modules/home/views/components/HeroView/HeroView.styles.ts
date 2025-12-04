@@ -11,13 +11,7 @@ export const heroStyles = {
   titleDot: cva('text-primary'),
   role: cva('text-3xl font-bold text-slate-400 md:text-5xl'),
   description: cva('max-w-md pt-4 text-lg leading-relaxed text-slate-400'),
-  actions: cva('flex flex-wrap gap-4 pt-4'),
-  primaryButton: cva(
-    'rounded bg-primary px-8 py-3 font-bold text-white shadow-lg shadow-primary/20 transition-transform hover:-translate-y-1 hover:bg-[#ff5252]'
-  ),
-  secondaryButton: cva(
-    'rounded border border-slate-600 px-8 py-3 font-medium text-white transition-colors hover:border-primary hover:text-primary'
-  ),
+  actions: cva('flex gap-4 pt-4'),
   imageWrapper: cva('group relative flex justify-center md:justify-end'),
   imageContainer: cva('relative size-64 md:size-80'),
   imageBorder: cva(

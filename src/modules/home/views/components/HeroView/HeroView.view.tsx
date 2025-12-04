@@ -1,4 +1,5 @@
 import { cn } from "@/_shared/utils/cn";
+import { Button } from "@/_shared/components/Button";
 
 import { HeroViewProps } from "./HeroView.model";
 import { useHeroViewViewModel } from "./HeroView.viewmodel";
@@ -25,18 +26,17 @@ export const HeroView = (props: HeroViewProps) => {
           </p>
 
           <div className={cn(styles.actions())}>
-            <a
+            <Button
               href="#contact"
-              className={cn(styles.primaryButton())}
             >
               Vamos conversar?
-            </a>
-            <a
+            </Button>
+            <Button
               href="#"
-              className={cn(styles.secondaryButton())}
+              variant="secondary"
             >
               Ver Currículo
-            </a>
+            </Button>
           </div>
         </div>
 
