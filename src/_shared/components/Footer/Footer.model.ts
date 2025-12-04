@@ -1,2 +1,1 @@
-
-export type IFooterModel = React.HTMLAttributes<HTMLElement>
+export type IFooterModel = React.HTMLAttributes<HTMLElement>;

@@ -5,11 +5,11 @@ import { cardVariants } from './Card.styles';
 import { useCardViewModel } from './Card.viewmodel';
 
 export const Card = (props: ICardModel) => {
-    const { className, children, ...rest } = useCardViewModel(props);
+  const { className, children, ...rest } = useCardViewModel(props);
 
-    return (
-        <div className={cn(cardVariants(), className)} {...rest}>
-            {children}
-        </div>
-    );
+  return (
+    <div className={cn(cardVariants(), className)} {...rest}>
+      {children}
+    </div>
+  );
 };

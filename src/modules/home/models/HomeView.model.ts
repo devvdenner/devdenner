@@ -1,15 +1,15 @@
 export interface IProfileSummary {
-    name: string;
-    role: string;
-    description: string;
+  name: string;
+  role: string;
+  description: string;
 }
 
 export interface IHomeModel {
-    profile: IProfileSummary;
-    isLoading: boolean;
+  profile: IProfileSummary;
+  isLoading: boolean;
 }
 
 export interface HomeViewProps {
-    profile: IProfileSummary;
-    techStack: string[];
+  profile: IProfileSummary;
+  techStack: string[];
 }

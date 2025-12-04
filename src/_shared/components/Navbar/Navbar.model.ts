@@ -1,1 +1,1 @@
-export type INavbarModel = React.HTMLAttributes<HTMLElement>
+export type INavbarModel = React.HTMLAttributes<HTMLElement>;
