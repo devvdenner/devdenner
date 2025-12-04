@@ -3,6 +3,7 @@
 import { Menu, X } from 'lucide-react';
 
 import { cn } from '@/_shared/utils/cn';
+import { Link } from '@/_shared/components/Link';
 
 import { INavbarModel } from './Navbar.model';
 import { mobileMenuVariants, navbarVariants } from './Navbar.styles';
@@ -15,19 +16,20 @@ export const Navbar = (props: INavbarModel) => {
   return (
     <nav className={cn(navbarVariants({ scrolled: isScrolled }), className)}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        <a href="#" className="text-2xl font-bold tracking-tighter text-white">
+        <Link href="#" variant="logo" className="text-2xl">
           DevDenner<span className="text-primary"> .</span>com
-        </a>
+        </Link>
 
         <div className="hidden space-x-8 md:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-slate-300 transition-colors hover:text-primary"
+              variant="nav"
+              className="text-sm"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -39,14 +41,15 @@ export const Navbar = (props: INavbarModel) => {
       {isMenuOpen && (
         <div className={mobileMenuVariants()}>
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               onClick={closeMenu}
-              className="text-lg font-medium text-slate-300 transition-colors hover:text-primary"
+              variant="nav"
+              className="text-lg"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
       )}
