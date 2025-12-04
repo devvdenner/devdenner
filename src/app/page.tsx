@@ -14,8 +14,8 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-background font-sans text-slate-300 selection:bg-primary selection:text-white">
       <HomeView profile={profile} techStack={techStack} />
-      <AboutView services={services} stats={stats} />
       <ProjectsView projects={projects} />
+      <AboutView services={services} stats={stats} />
       <ContactView profile={profile} />
     </div>
   );
