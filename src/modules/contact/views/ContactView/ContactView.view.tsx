@@ -2,31 +2,36 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import React from 'react';
 
 import { Section } from '@/_shared/components/Section';
+import { cn } from '@/_shared/utils/cn';
 
-import { ContactViewProps } from '../models/ContactView.model';
-import { ContactForm } from './components/ContactForm';
+import { ContactForm } from '../components/ContactForm';
+import { ContactViewProps } from './ContactView.model';
+import { contactViewStyles } from './ContactView.styles';
+import { useContactViewModel } from './ContactView.viewmodel';
 
-export default function ContactView({ profile }: ContactViewProps) {
+export const ContactView = (props: ContactViewProps) => {
+  const { profile } = useContactViewModel(props);
+
   return (
-    <Section id="contact" className="bg-gradient-to-b from-background to-[#0a101f]">
-      <div className="mx-auto max-w-4xl">
-        <div className="mb-16 text-center">
-          <p className="mb-4 font-mono text-primary">Qual o próximo passo?</p>
-          <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">
+    <Section id="contact" className={cn(contactViewStyles.section())}>
+      <div className={cn(contactViewStyles.container())}>
+        <div className={cn(contactViewStyles.header())}>
+          <p className={cn(contactViewStyles.subtitle())}>Qual o próximo passo?</p>
+          <h2 className={cn(contactViewStyles.title())}>
             Vamos trabalhar juntos?
           </h2>
-          <p className="mx-auto max-w-xl text-lg text-slate-400">
+          <p className={cn(contactViewStyles.description())}>
             Estou atualmente aberto a novas oportunidades. Se você tem uma pergunta ou apenas quer
             dar um oi, minha caixa de entrada está sempre aberta!
           </p>
         </div>
 
-        <div className="grid items-start gap-12 md:grid-cols-2">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-white">Contatos</h3>
+        <div className={cn(contactViewStyles.contentGrid())}>
+          <div className={cn(contactViewStyles.contactsList())}>
+            <h3 className={cn(contactViewStyles.contactsTitle())}>Contatos</h3>
             <a
               href={`mailto:${profile.socials.email}`}
-              className="flex cursor-pointer items-center gap-4 text-slate-400 transition-colors hover:text-primary"
+              className={cn(contactViewStyles.contactLink())}
             >
               <Mail size={20} />
               <span>{profile.socials.email}</span>
@@ -35,7 +40,7 @@ export default function ContactView({ profile }: ContactViewProps) {
               href={`https://${profile.socials.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex cursor-pointer items-center gap-4 text-slate-400 transition-colors hover:text-primary"
+              className={cn(contactViewStyles.contactLink())}
             >
               <Linkedin size={20} />
               <span>{profile.socials.linkedin}</span>
@@ -44,7 +49,7 @@ export default function ContactView({ profile }: ContactViewProps) {
               href={`https://${profile.socials.github}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex cursor-pointer items-center gap-4 text-slate-400 transition-colors hover:text-primary"
+              className={cn(contactViewStyles.contactLink())}
             >
               <Github size={20} />
               <span>{profile.socials.github}</span>
@@ -56,4 +61,4 @@ export default function ContactView({ profile }: ContactViewProps) {
       </div>
     </Section>
   );
-}
+};

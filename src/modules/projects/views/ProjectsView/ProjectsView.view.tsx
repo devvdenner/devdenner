@@ -1,40 +1,48 @@
 import { ChevronRight, ExternalLink, Github } from 'lucide-react';
+import React from 'react';
 
 import { Section } from '@/_shared/components/Section';
 import { cn } from '@/_shared/utils/cn';
 
-import { ProjectsViewProps } from '../models/ProjectsView.model';
+import { ProjectsViewProps } from './ProjectsView.model';
+import { projectsViewStyles } from './ProjectsView.styles';
+import { useProjectsViewModel } from './ProjectsView.viewmodel';
 
-export default function ProjectsView({ projects }: ProjectsViewProps) {
+export const ProjectsView = (props: ProjectsViewProps) => {
+  const { projects } = useProjectsViewModel(props);
+
   return (
-    <Section id="projects">
-      <div className="mb-16 flex flex-col items-center text-center">
-        <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">Projetos em Destaque</h2>
-        <div className="h-1 w-16 bg-primary"></div>
+    <Section id="projects" className={cn(projectsViewStyles.section())}>
+      <div className={cn(projectsViewStyles.header())}>
+        <h2 className={cn(projectsViewStyles.title())}>Projetos em Destaque</h2>
+        <div className={cn(projectsViewStyles.divider())}></div>
       </div>
 
-      <div className="space-y-24">
+      <div className={cn(projectsViewStyles.projectsList())}>
         {projects.map((project, index) => {
           const isEven = index % 2 !== 0;
           return (
-            <div key={project.id} className="grid items-center gap-8 md:grid-cols-12">
+            <div key={project.id} className={cn(projectsViewStyles.projectItem())}>
               {/* Image Area */}
               <div
-                className={cn('md:col-span-7 relative group', isEven ? 'order-1 md:order-2' : '')}
+                className={cn(
+                  projectsViewStyles.imageArea(),
+                  isEven ? 'order-1 md:order-2' : ''
+                )}
               >
                 <div
                   className={cn(
-                    'absolute inset-0 bg-primary/20 rounded transition-transform',
+                    projectsViewStyles.imageOverlay(),
                     isEven
                       ? '-translate-x-2 translate-y-2 group-hover:-translate-x-1 group-hover:translate-y-1'
                       : 'translate-x-2 translate-y-2 group-hover:translate-x-1 group-hover:translate-y-1'
                   )}
                 ></div>
-                <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded border border-slate-700 bg-surface shadow-2xl">
+                <div className={cn(projectsViewStyles.imageContainer())}>
                   <img
-                    src={project.image}
+                    src={project.image as string}
                     alt={project.imagePlaceholder}
-                    className="size-full object-cover"
+                    className={cn(projectsViewStyles.image())}
                   />
                 </div>
               </div>
@@ -42,17 +50,17 @@ export default function ProjectsView({ projects }: ProjectsViewProps) {
               {/* Content Area */}
               <div
                 className={cn(
-                  'md:col-span-5 z-10',
+                  projectsViewStyles.contentArea(),
                   isEven
                     ? 'text-left order-2 md:order-1'
                     : 'md:-ml-12 text-right md:text-right text-left'
                 )}
               >
-                <p className="mb-2 font-mono text-sm text-primary">{project.type}</p>
-                <h3 className="mb-4 text-2xl font-bold text-white">{project.title}</h3>
+                <p className={cn(projectsViewStyles.projectType())}>{project.type}</p>
+                <h3 className={cn(projectsViewStyles.projectTitle())}>{project.title}</h3>
                 <div
                   className={cn(
-                    'bg-[#112240] p-6 rounded shadow-xl mb-6 text-slate-400 text-sm leading-relaxed',
+                    projectsViewStyles.projectDesc(),
                     isEven ? 'md:-mr-12 relative z-20' : ''
                   )}
                 >
@@ -60,7 +68,7 @@ export default function ProjectsView({ projects }: ProjectsViewProps) {
                 </div>
                 <div
                   className={cn(
-                    'flex flex-wrap gap-4 mb-6 font-mono text-xs text-slate-400',
+                    projectsViewStyles.techList(),
                     isEven ? '' : 'justify-end md:justify-end justify-start'
                   )}
                 >
@@ -70,19 +78,19 @@ export default function ProjectsView({ projects }: ProjectsViewProps) {
                 </div>
                 <div
                   className={cn(
-                    'flex gap-4',
+                    projectsViewStyles.links(),
                     isEven ? '' : 'justify-end md:justify-end justify-start'
                   )}
                 >
                   <a
                     href={project.links.github}
-                    className="text-slate-300 transition-colors hover:text-primary"
+                    className={cn(projectsViewStyles.link())}
                   >
                     <Github size={20} />
                   </a>
                   <a
                     href={project.links.external}
-                    className="text-slate-300 transition-colors hover:text-primary"
+                    className={cn(projectsViewStyles.link())}
                   >
                     <ExternalLink size={20} />
                   </a>
@@ -93,14 +101,14 @@ export default function ProjectsView({ projects }: ProjectsViewProps) {
         })}
       </div>
 
-      <div className="mt-20 text-center">
+      <div className={cn(projectsViewStyles.footer())}>
         <a
           href="#"
-          className="inline-flex items-center gap-2 rounded border border-primary px-8 py-4 font-bold text-primary transition-colors hover:bg-primary/10"
+          className={cn(projectsViewStyles.viewAllLink())}
         >
           Ver Arquivo Completo <ChevronRight size={18} />
         </a>
       </div>
     </Section>
   );
-}
+};
