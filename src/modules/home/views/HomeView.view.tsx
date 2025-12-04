@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { cn } from '@/_shared/utils/cn';
-import { HeroView } from '../components/HeroView';
-import { TechStack } from '../components/TechStack';
-import { HomeViewProps } from './HomeView.model';
+
+import { HomeViewProps } from '../models/HomeView.model';
+import { useHomeViewModel } from '../viewmodels/HomeView.viewmodel';
+import { HeroView } from './components/HeroView';
+import { TechStack } from './components/TechStack';
 import { homeViewStyles } from './HomeView.styles';
-import { useHomeViewModel } from './HomeView.viewmodel';
 
 export const HomeView = (props: HomeViewProps) => {
   const { profile, techStack } = useHomeViewModel(props);

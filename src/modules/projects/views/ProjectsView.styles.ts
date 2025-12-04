@@ -7,19 +7,19 @@ export const projectsViewStyles = {
   divider: cva('h-1 w-16 bg-primary'),
   projectsList: cva('space-y-24'),
   projectItem: cva('grid items-center gap-8 md:grid-cols-12'),
-  imageArea: cva('md:col-span-7 relative group'),
-  imageOverlay: cva('absolute inset-0 bg-primary/20 rounded transition-transform'),
+  imageArea: cva('group relative md:col-span-7'),
+  imageOverlay: cva('absolute inset-0 rounded bg-primary/20 transition-transform'),
   imageContainer: cva(
     'relative flex aspect-video items-center justify-center overflow-hidden rounded border border-slate-700 bg-surface shadow-2xl'
   ),
   image: cva('size-full object-cover'),
-  contentArea: cva('md:col-span-5 z-10'),
+  contentArea: cva('z-10 md:col-span-5'),
   projectType: cva('mb-2 font-mono text-sm text-primary'),
   projectTitle: cva('mb-4 text-2xl font-bold text-white'),
   projectDesc: cva(
-    'bg-[#112240] p-6 rounded shadow-xl mb-6 text-slate-400 text-sm leading-relaxed'
+    'mb-6 rounded bg-[#112240] p-6 text-sm leading-relaxed text-slate-400 shadow-xl'
   ),
-  techList: cva('flex flex-wrap gap-4 mb-6 font-mono text-xs text-slate-400'),
+  techList: cva('mb-6 flex flex-wrap gap-4 font-mono text-xs text-slate-400'),
   links: cva('flex gap-4'),
   link: cva('text-slate-300 transition-colors hover:text-primary'),
   footer: cva('mt-20 text-center'),

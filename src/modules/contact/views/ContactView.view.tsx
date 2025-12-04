@@ -4,10 +4,10 @@ import React from 'react';
 import { Section } from '@/_shared/components/Section';
 import { cn } from '@/_shared/utils/cn';
 
-import { ContactForm } from '../components/ContactForm';
-import { ContactViewProps } from './ContactView.model';
+import { ContactViewProps } from '../models/ContactView.model';
+import { useContactViewModel } from '../viewmodels/ContactView.viewmodel';
+import { ContactForm } from './components/ContactForm';
 import { contactViewStyles } from './ContactView.styles';
-import { useContactViewModel } from './ContactView.viewmodel';
 
 export const ContactView = (props: ContactViewProps) => {
   const { profile } = useContactViewModel(props);

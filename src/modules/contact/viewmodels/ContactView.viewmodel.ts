@@ -1,4 +1,4 @@
-import { ContactViewProps } from './ContactView.model';
+import { ContactViewProps } from '../models/ContactView.model';
 
 export const useContactViewModel = (props: ContactViewProps) => {
   return {

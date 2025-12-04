@@ -1,10 +1,8 @@
-import { Footer } from '@/_shared/components/Footer';
-import { Navbar } from '@/_shared/components/Navbar';
 import { MockAPI } from '@/_shared/services/api';
-import AboutView from '@/modules/about/views/AboutView';
-import ContactView from '@/modules/contact/views/ContactView';
-import HomeView from '@/modules/home/views/HomeView';
-import ProjectsView from '@/modules/projects/views/ProjectsView';
+import { AboutView } from '@/modules/about/views/AboutView.view';
+import { ContactView } from '@/modules/contact/views/ContactView.view';
+import { HomeView } from '@/modules/home/views/HomeView.view';
+import { ProjectsView } from '@/modules/projects/views/ProjectsView.view';
 
 export default async function Home() {
   const profile = await MockAPI.getProfile();

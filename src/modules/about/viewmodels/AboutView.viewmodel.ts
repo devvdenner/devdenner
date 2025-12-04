@@ -1,4 +1,4 @@
-import { AboutViewProps } from './AboutView.model';
+import { AboutViewProps } from '../models/AboutView.model';
 
 export const useAboutViewModel = (props: AboutViewProps) => {
   return {

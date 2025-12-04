@@ -4,9 +4,9 @@ import React from 'react';
 import { Section } from '@/_shared/components/Section';
 import { cn } from '@/_shared/utils/cn';
 
-import { AboutViewProps } from './AboutView.model';
+import { AboutViewProps } from '../models/AboutView.model';
+import { useAboutViewModel } from '../viewmodels/AboutView.viewmodel';
 import { aboutViewStyles } from './AboutView.styles';
-import { useAboutViewModel } from './AboutView.viewmodel';
 
 const iconMap: Record<string, React.ReactNode> = {
   Layout: <Layout size={32} />,

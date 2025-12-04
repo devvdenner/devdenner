@@ -1,4 +1,4 @@
-import { ProjectsViewProps } from './ProjectsView.model';
+import { ProjectsViewProps } from '../models/ProjectsView.model';
 
 export const useProjectsViewModel = (props: ProjectsViewProps) => {
   return {

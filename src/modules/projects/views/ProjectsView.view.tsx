@@ -4,9 +4,9 @@ import React from 'react';
 import { Section } from '@/_shared/components/Section';
 import { cn } from '@/_shared/utils/cn';
 
-import { ProjectsViewProps } from './ProjectsView.model';
+import { ProjectsViewProps } from '../models/ProjectsView.model';
+import { useProjectsViewModel } from '../viewmodels/ProjectsView.viewmodel';
 import { projectsViewStyles } from './ProjectsView.styles';
-import { useProjectsViewModel } from './ProjectsView.viewmodel';
 
 export const ProjectsView = (props: ProjectsViewProps) => {
   const { projects } = useProjectsViewModel(props);
