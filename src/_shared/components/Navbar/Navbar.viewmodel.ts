@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useEffect,useState } from 'react';
+
 import { INavbarModel } from './Navbar.model';
 
 export const useNavbarViewModel = (props: INavbarModel) => {

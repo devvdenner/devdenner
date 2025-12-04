@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
 import { Send } from 'lucide-react';
+import React from 'react';
 
 export const ContactForm = () => {
     return (
@@ -10,12 +10,12 @@ export const ContactForm = () => {
                 <input
                     type="text"
                     placeholder="Seu Nome"
-                    className="w-full bg-transparent border-b border-slate-700 py-3 text-slate-300 focus:border-primary focus:outline-none transition-colors peer placeholder-transparent"
+                    className="peer w-full border-b border-slate-700 bg-transparent py-3 text-slate-300 transition-colors placeholder:text-transparent focus:border-primary focus:outline-none"
                     id="name"
                 />
                 <label
                     htmlFor="name"
-                    className="absolute left-0 -top-3.5 text-sm text-slate-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-primary peer-focus:text-sm"
+                    className="absolute -top-3.5 left-0 text-sm text-slate-500 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-primary"
                 >
                     Nome
                 </label>
@@ -25,12 +25,12 @@ export const ContactForm = () => {
                 <input
                     type="email"
                     placeholder="Seu Email"
-                    className="w-full bg-transparent border-b border-slate-700 py-3 text-slate-300 focus:border-primary focus:outline-none transition-colors peer placeholder-transparent"
+                    className="peer w-full border-b border-slate-700 bg-transparent py-3 text-slate-300 transition-colors placeholder:text-transparent focus:border-primary focus:outline-none"
                     id="email"
                 />
                 <label
                     htmlFor="email"
-                    className="absolute left-0 -top-3.5 text-sm text-slate-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-primary peer-focus:text-sm"
+                    className="absolute -top-3.5 left-0 text-sm text-slate-500 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-primary"
                 >
                     Email
                 </label>
@@ -40,20 +40,20 @@ export const ContactForm = () => {
                 <textarea
                     rows={4}
                     placeholder="Sua Mensagem"
-                    className="w-full bg-transparent border-b border-slate-700 py-3 text-slate-300 focus:border-primary focus:outline-none transition-colors peer placeholder-transparent resize-none"
+                    className="peer w-full resize-none border-b border-slate-700 bg-transparent py-3 text-slate-300 transition-colors placeholder:text-transparent focus:border-primary focus:outline-none"
                     id="message"
                 ></textarea>
                 <label
                     htmlFor="message"
-                    className="absolute left-0 -top-3.5 text-sm text-slate-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-primary peer-focus:text-sm"
+                    className="absolute -top-3.5 left-0 text-sm text-slate-500 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-primary"
                 >
                     Mensagem
                 </label>
             </div>
 
-            <button className="w-full md:w-auto px-8 py-3 bg-primary text-white font-bold rounded shadow-lg hover:bg-[#ff5252] transition-all flex items-center justify-center gap-2 group">
+            <button className="group flex w-full items-center justify-center gap-2 rounded bg-primary px-8 py-3 font-bold text-white shadow-lg transition-all hover:bg-[#ff5252] md:w-auto">
                 Enviar Mensagem
-                <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                <Send size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
         </form>
     );

@@ -1,15 +1,17 @@
 import React from 'react';
+
 import { cn } from '@/_shared/utils/cn';
+
 import { ISectionModel } from './Section.model';
-import { useSectionViewModel } from './Section.viewmodel';
 import { sectionVariants } from './Section.styles';
+import { useSectionViewModel } from './Section.viewmodel';
 
 export const Section = (props: ISectionModel) => {
     const { children, id, className, ...rest } = useSectionViewModel(props);
 
     return (
         <section id={id} className={cn(sectionVariants(), className)} {...rest}>
-            <div className="max-w-6xl mx-auto">
+            <div className="mx-auto max-w-6xl">
                 {children}
             </div>
         </section>

@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority';
 
 export const footerVariants = cva(
-    "py-8 bg-background text-center border-t border-slate-800"
+    "border-t border-slate-800 bg-background py-8 text-center"
 );

@@ -1,11 +1,11 @@
 import { cva } from 'class-variance-authority';
 
 export const navbarVariants = cva(
-    "fixed top-0 w-full z-50 transition-all duration-300",
+    "fixed top-0 z-50 w-full transition-all duration-300",
     {
         variants: {
             scrolled: {
-                true: "bg-background/90 backdrop-blur-md py-4 shadow-lg",
+                true: "bg-background/90 py-4 shadow-lg backdrop-blur-md",
                 false: "bg-transparent py-6"
             }
         },
@@ -16,5 +16,5 @@ export const navbarVariants = cva(
 );
 
 export const mobileMenuVariants = cva(
-    "absolute top-full left-0 w-full bg-surface border-t border-slate-700 md:hidden flex flex-col items-center py-6 space-y-4 shadow-2xl"
+    "absolute left-0 top-full flex w-full flex-col items-center space-y-4 border-t border-slate-700 bg-surface py-6 shadow-2xl md:hidden"
 );

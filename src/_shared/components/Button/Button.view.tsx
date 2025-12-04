@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { cn } from '@/_shared/utils/cn';
+
 import { IButtonModel } from './Button.model';
-import { useButtonViewModel } from './Button.viewmodel';
 import { buttonVariants } from './Button.styles';
+import { useButtonViewModel } from './Button.viewmodel';
 
 
 export const Button = (props: IButtonModel) => {
