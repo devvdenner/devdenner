@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { ITypographyModel } from './Typography.model';
 
 export const useTypographyViewModel = (props: ITypographyModel) => {
