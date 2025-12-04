@@ -24,7 +24,6 @@ export const Navbar = (props: INavbarModel) => {
                     DevDenner<span className="text-primary"> .</span>com
                 </a>
 
-                {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-8">
                     {navLinks.map((link) => (
                         <a
@@ -37,13 +36,11 @@ export const Navbar = (props: INavbarModel) => {
                     ))}
                 </div>
 
-                {/* Mobile Menu Button */}
                 <button onClick={toggleMenu} className="md:hidden text-white">
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
 
-            {/* Mobile Menu Overlay */}
             {isMenuOpen && (
                 <div className={mobileMenuVariants()}>
                     {navLinks.map((link) => (
