@@ -2,6 +2,7 @@ import NextLink from 'next/link';
 
 import { cn } from '@/_shared/utils/cn';
 
+import { Typography } from '../Typography';
 import { ILinkModel } from './Link.model';
 import { linkStyles } from './Link.styles';
 import { useLinkViewModel } from './Link.viewmodel';
@@ -11,7 +12,9 @@ export const Link = (props: ILinkModel) => {
 
   return (
     <NextLink className={cn(linkStyles({ variant }), className)} {...rest}>
-      {children}
+      <Typography variant="p" className="text-inherit">
+        {children}
+      </Typography>
     </NextLink>
   );
 };
