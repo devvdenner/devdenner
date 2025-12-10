@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-roboto)', 'Roboto', 'sans-serif'],
+      },
       colors: {
         slate: {
           300: '#cbd5e1',
