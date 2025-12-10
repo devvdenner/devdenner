@@ -2,8 +2,8 @@
 
 import { Menu, X } from 'lucide-react';
 
-import { cn } from '@/_shared/utils/cn';
 import { Link } from '@/_shared/components/Link';
+import { cn } from '@/_shared/utils/cn';
 
 import { INavbarModel } from './Navbar.model';
 import { mobileMenuVariants, navbarVariants } from './Navbar.styles';
@@ -22,12 +22,7 @@ export const Navbar = (props: INavbarModel) => {
 
         <div className="hidden space-x-8 md:flex">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              variant="nav"
-              className="text-sm"
-            >
+            <Link key={link.name} href={link.href} variant="nav" className="text-sm">
               {link.name}
             </Link>
           ))}

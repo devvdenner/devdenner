@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+
+/.vscode/
+
 # production
 /build
 
@@ -38,6 +41,7 @@ yarn-error.log*
 
 .gemini/
 GEMINI.md
+CLAUDE.md
 
 # typescript
 *.tsbuildinfo
