@@ -16,7 +16,7 @@ export default async function Home() {
       <HomeView profile={profile} techStack={techStack} />
       <ProjectsView projects={projects} />
       <AboutView services={services} stats={stats} />
-      <ContactView profile={profile} />
+      {/* <ContactView profile={profile} /> */}
     </div>
   );
 }

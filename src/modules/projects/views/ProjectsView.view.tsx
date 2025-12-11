@@ -25,10 +25,7 @@ export const ProjectsView = (props: ProjectsViewProps) => {
             <div key={project.id} className={cn(projectsViewStyles.projectItem())}>
               {/* Image Area */}
               <div
-                className={cn(
-                  projectsViewStyles.imageArea(),
-                  isEven ? 'order-1 md:order-2' : ''
-                )}
+                className={cn(projectsViewStyles.imageArea(), isEven ? 'order-1 md:order-2' : '')}
               >
                 <div
                   className={cn(
@@ -82,16 +79,10 @@ export const ProjectsView = (props: ProjectsViewProps) => {
                     isEven ? '' : 'justify-end md:justify-end justify-start'
                   )}
                 >
-                  <a
-                    href={project.links.github}
-                    className={cn(projectsViewStyles.link())}
-                  >
+                  <a href={project.links.github} className={cn(projectsViewStyles.link())}>
                     <Github size={20} />
                   </a>
-                  <a
-                    href={project.links.external}
-                    className={cn(projectsViewStyles.link())}
-                  >
+                  <a href={project.links.external} className={cn(projectsViewStyles.link())}>
                     <ExternalLink size={20} />
                   </a>
                 </div>
@@ -99,15 +90,6 @@ export const ProjectsView = (props: ProjectsViewProps) => {
             </div>
           );
         })}
-      </div>
-
-      <div className={cn(projectsViewStyles.footer())}>
-        <a
-          href="#"
-          className={cn(projectsViewStyles.viewAllLink())}
-        >
-          Ver Arquivo Completo <ChevronRight size={18} />
-        </a>
       </div>
     </Section>
   );

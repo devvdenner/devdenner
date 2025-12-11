@@ -50,7 +50,7 @@ export const MockAPI = {
       {
         id: 1,
         type: 'SaaS Platform',
-        title: 'CDP Platform',
+        title: 'EasyCDP',
         description:
           'Plataforma de gestão de dados de clientes (Customer Data Platform) e personalização de mensagens para engajamento multicanal, voltada a pequenas e médias empresas. Liderei o desenvolvimento frontend desde o zero, definindo arquitetura modular, padrões MVVM e hexagonal na camada de serviços.',
         tech: [
@@ -91,45 +91,45 @@ export const MockAPI = {
         company: 'Sua Formatura',
         period: '08/2021 - 10/2024',
       },
-      {
-        id: 3,
-        type: 'Web App',
-        title: 'Sistema CICA',
-        description:
-          'Desenvolvi todo o frontend da aplicação com foco em performance, responsividade e usabilidade. Integrei o sistema ao backend em Django REST Framework, implementando autenticação JWT e controle de permissões de acesso.',
-        tech: ['Vue.js', 'Django REST Framework', 'JWT', 'CSS'],
-        image: 'https://blog.hubspot.com/hubfs/freerange.png',
-        imagePlaceholder: 'CICA',
-        links: { github: '#', external: '#' },
-        company: 'CICA',
-        period: '10/2020 - 08/2021',
-      },
-      {
-        id: 4,
-        type: 'QA Automation',
-        title: 'Quimbik QA',
-        description:
-          'Atuei na automação de testes e Quality Assurance para empresa americana, garantindo a qualidade e estabilidade das aplicações através de testes automatizados.',
-        tech: ['Automation Testing', 'QA', 'JavaScript'],
-        image: 'https://blog.hubspot.com/hubfs/freerange.png',
-        imagePlaceholder: 'Quimbik',
-        links: { github: '#', external: '#' },
-        company: 'Quimbik Inc. (EUA)',
-        period: '08/2022 - 03/2024',
-      },
-      {
-        id: 5,
-        type: 'QA Automation',
-        title: 'EDGE QA',
-        description:
-          'Conduzi testes funcionais e automatizados utilizando Cypress, melhorando a cobertura de testes e a confiabilidade do sistema.',
-        tech: ['Cypress', 'JavaScript', 'QA'],
-        image: 'https://blog.hubspot.com/hubfs/freerange.png',
-        imagePlaceholder: 'EDGE',
-        links: { github: '#', external: '#' },
-        company: 'EDGE',
-        period: '03/2022 - 09/2022',
-      },
+      // {
+      //   id: 3,
+      //   type: 'Web App',
+      //   title: 'Sistema CICA',
+      //   description:
+      //     'Desenvolvi todo o frontend da aplicação com foco em performance, responsividade e usabilidade. Integrei o sistema ao backend em Django REST Framework, implementando autenticação JWT e controle de permissões de acesso.',
+      //   tech: ['Vue.js', 'Django REST Framework', 'JWT', 'CSS'],
+      //   image: 'https://blog.hubspot.com/hubfs/freerange.png',
+      //   imagePlaceholder: 'CICA',
+      //   links: { github: '#', external: '#' },
+      //   company: 'CICA',
+      //   period: '10/2020 - 08/2021',
+      // },
+      // {
+      //   id: 4,
+      //   type: 'QA Automation',
+      //   title: 'Quimbik QA',
+      //   description:
+      //     'Atuei na automação de testes e Quality Assurance para empresa americana, garantindo a qualidade e estabilidade das aplicações através de testes automatizados.',
+      //   tech: ['Automation Testing', 'QA', 'JavaScript'],
+      //   image: 'https://blog.hubspot.com/hubfs/freerange.png',
+      //   imagePlaceholder: 'Quimbik',
+      //   links: { github: '#', external: '#' },
+      //   company: 'Quimbik Inc. (EUA)',
+      //   period: '08/2022 - 03/2024',
+      // },
+      // {
+      //   id: 5,
+      //   type: 'QA Automation',
+      //   title: 'EDGE QA',
+      //   description:
+      //     'Conduzi testes funcionais e automatizados utilizando Cypress, melhorando a cobertura de testes e a confiabilidade do sistema.',
+      //   tech: ['Cypress', 'JavaScript', 'QA'],
+      //   image: 'https://blog.hubspot.com/hubfs/freerange.png',
+      //   imagePlaceholder: 'EDGE',
+      //   links: { github: '#', external: '#' },
+      //   company: 'EDGE',
+      //   period: '03/2022 - 09/2022',
+      // },
       {
         id: 6,
         type: 'Web App',
@@ -141,17 +141,17 @@ export const MockAPI = {
         imagePlaceholder: 'Calculadora Milhas',
         links: { github: '#', external: 'https://calculadoradasmilhas.com' },
       },
-      {
-        id: 7,
-        type: 'Institucional',
-        title: 'ARACOMP (UFAL)',
-        description:
-          'Site institucional para o evento acadêmico da Universidade Federal de Alagoas, desenvolvido seguindo princípios de design responsivo e acessibilidade.',
-        tech: ['Django', 'Django REST Framework', 'Python', 'HTML', 'SCSS'],
-        image: 'https://blog.hubspot.com/hubfs/freerange.png',
-        imagePlaceholder: 'ARACOMP',
-        links: { github: '#', external: '#' },
-      },
+      // {
+      //   id: 7,
+      //   type: 'Institucional',
+      //   title: 'ARACOMP (UFAL)',
+      //   description:
+      //     'Site institucional para o evento acadêmico da Universidade Federal de Alagoas, desenvolvido seguindo princípios de design responsivo e acessibilidade.',
+      //   tech: ['Django', 'Django REST Framework', 'Python', 'HTML', 'SCSS'],
+      //   image: 'https://blog.hubspot.com/hubfs/freerange.png',
+      //   imagePlaceholder: 'ARACOMP',
+      //   links: { github: '#', external: '#' },
+      // },
     ];
   },
 };
