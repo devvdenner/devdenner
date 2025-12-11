@@ -1,0 +1,25 @@
+{
+  "Navbar": {
+    "links": {
+      "home": "Início",
+      "about": "Sobre",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "Footer": {
+    "copyright": "Todos os direitos reservados."
+  },
+  "Home": {
+    "hero": {
+      "greeting": "Olá, meu nome é",
+      "title": "Denner Nascimento",
+      "subtitle": "Desenvolvedor Frontend",
+      "description": "Desenvolvedor Frontend com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis com React, Next.js, Vue e TypeScript.",
+      "cta": {
+        "contact": "Vamos conversar?",
+        "resume": "Ver Currículo"
+      }
+    }
+  }
+}
