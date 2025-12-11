@@ -1,8 +1,10 @@
-import { cn } from "@/_shared/utils/cn";
-import { Button } from "@/_shared/components/Button";
+import Image from 'next/image';
 
-import { HeroViewProps } from "./HeroView.model";
-import { useHeroViewViewModel } from "./HeroView.viewmodel";
+import { Button } from '@/_shared/components/Button';
+import { cn } from '@/_shared/utils/cn';
+
+import { HeroViewProps } from './HeroView.model';
+import { useHeroViewViewModel } from './HeroView.viewmodel';
 
 export const HeroView = (props: HeroViewProps) => {
   const { profile, styles } = useHeroViewViewModel(props);
@@ -21,18 +23,12 @@ export const HeroView = (props: HeroViewProps) => {
             <span className={cn(styles.titleDot())}>.</span>
           </h1>
           <h2 className={cn(styles.role())}>{profile.role}</h2>
-          <p className={cn(styles.description())}>
-            {profile.description}
-          </p>
+          <p className={cn(styles.description())}>{profile.description}</p>
 
           <div className={cn(styles.actions())}>
+            <Button href="https://www.linkedin.com/in/denner-nascimento/">Vamos conversar?</Button>
             <Button
-              href="#contact"
-            >
-              Vamos conversar?
-            </Button>
-            <Button
-              href="#"
+              href="https://files.devdenner.com/pdf-files/Jose%20Denner%20Lira%20do%20Nascimento%20-%20Desenvolvedor%20Frontend.pdf"
               variant="secondary"
             >
               Ver Currículo
@@ -44,10 +40,13 @@ export const HeroView = (props: HeroViewProps) => {
           <div className={cn(styles.imageContainer())}>
             <div className={cn(styles.imageBorder())}></div>
             <div className={cn(styles.imageInner())}>
-              {/* Placeholder Image using a gradient/pattern if no user image */}
-              <div className={cn(styles.imagePlaceholder())}>
-                <span className={cn(styles.imageIcon())}>👨‍💻</span>
-              </div>
+              <Image
+                src="https://files.devdenner.com/profiles-pictures/profile-picture-1.jpg"
+                alt={profile.name}
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
