@@ -1,5 +1,4 @@
 import { Github, Linkedin } from 'lucide-react';
-import React from 'react';
 
 import { cn } from '@/_shared/utils/cn';
 
@@ -13,10 +12,16 @@ export const Footer = (props: IFooterModel) => {
   return (
     <footer className={cn(footerVariants(), className)} {...rest}>
       <div className="mt-4 flex justify-center space-x-6">
-        <a href="#" className="text-slate-500 transition-colors hover:text-primary">
+        <a
+          href="https://github.com/devvdenner"
+          className="text-slate-500 transition-colors hover:text-primary"
+        >
           <Github size={18} />
         </a>
-        <a href="#" className="text-slate-500 transition-colors hover:text-primary">
+        <a
+          href="https://www.linkedin.com/in/denner-nascimento/"
+          className="text-slate-500 transition-colors hover:text-primary"
+        >
           <Linkedin size={18} />
         </a>
       </div>
