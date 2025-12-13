@@ -25,5 +25,35 @@
         "resume": "View Resume"
       }
     }
+  },
+  "About": {
+    "title": "About Me",
+    "bio": "I started my programming journey through design. Since then, I learned to love the process of building things from scratch. This led me to software development, combining my passion for continuous learning and solving complex problems."
+  },
+  "Projects": {
+    "title": "Featured Projects"
+  },
+  "Profile": {
+    "role": "Frontend Developer",
+    "description": "Frontend Developer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript. I work with a focus on technical excellence, collaboration, and high-impact deliveries."
+  },
+  "Services": {
+    "frontend": {
+      "title": "Frontend Development",
+      "desc": "Modern interfaces with React, Next.js, and Vue."
+    },
+    "architecture": {
+      "title": "Architecture & Best Practices",
+      "desc": "Clean Architecture, MVVM, and Automated Testing."
+    },
+    "mobile": {
+      "title": "Mobile & QA",
+      "desc": "React Native, Cypress, Playwright, and Vitest."
+    }
+  },
+  "Stats": {
+    "experience": "Years of Experience",
+    "projects": "Projects Delivered",
+    "companies": "Companies"
   }
 }
