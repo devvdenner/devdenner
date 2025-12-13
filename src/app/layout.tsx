@@ -5,7 +5,7 @@ import { Roboto } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 
 import { Footer } from '@/_shared/components/Footer';
-import { Navbar } from '@/_shared/components/Navbar';
+import { Navbar } from '@/_shared/templates/Navbar';
 
 const roboto = Roboto({
   variable: '--font-roboto',
