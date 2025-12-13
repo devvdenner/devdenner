@@ -1,4 +1,7 @@
+'use client';
+
 import { Layout, Server, Smartphone } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { Section } from '@/_shared/components/Section';
@@ -16,11 +19,12 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export const AboutView = (props: AboutViewProps) => {
   const { services, stats } = useAboutViewModel(props);
+  const t = useTranslations('About');
 
   return (
     <Section id="about" className={cn(aboutViewStyles.section())}>
       <div className={cn(aboutViewStyles.header())}>
-        <h2 className={cn(aboutViewStyles.title())}>Sobre Mim</h2>
+        <h2 className={cn(aboutViewStyles.title())}>{t('title')}</h2>
         <div className={cn(aboutViewStyles.divider())}></div>
       </div>
 
@@ -29,9 +33,7 @@ export const AboutView = (props: AboutViewProps) => {
         <div className={cn(aboutViewStyles.servicesList())}>
           {services.map((service, index) => (
             <div key={index} className={cn(aboutViewStyles.serviceItem())}>
-              <div className={cn(aboutViewStyles.iconWrapper())}>
-                {iconMap[service.icon]}
-              </div>
+              <div className={cn(aboutViewStyles.iconWrapper())}>{iconMap[service.icon]}</div>
               <div className={cn(aboutViewStyles.serviceContent())}>
                 <h3 className={cn(aboutViewStyles.serviceTitle())}>{service.title}</h3>
                 <p className={cn(aboutViewStyles.serviceDesc())}>{service.desc}</p>
@@ -42,11 +44,7 @@ export const AboutView = (props: AboutViewProps) => {
 
         {/* Bio & Stats */}
         <div className={cn(aboutViewStyles.bioContainer())}>
-          <p className={cn(aboutViewStyles.bioText())}>
-            Comecei minha jornada na programação através do design. Desde então, aprendi a amar o
-            processo de construir coisas do zero. Isso me levou ao desenvolvimento de software,
-            unindo minha paixão por aprendizado contínuo e resolução de problemas complexos.
-          </p>
+          <p className={cn(aboutViewStyles.bioText())}>{t('bio')}</p>
 
           <div className={cn(aboutViewStyles.statsGrid())}>
             {stats.map((stat, index) => (

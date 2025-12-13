@@ -1,4 +1,7 @@
-import { ChevronRight, ExternalLink, Github } from 'lucide-react';
+'use client';
+
+import { ExternalLink, Github } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 import { Section } from '@/_shared/components/Section';
@@ -10,11 +13,12 @@ import { projectsViewStyles } from './ProjectsView.styles';
 
 export const ProjectsView = (props: ProjectsViewProps) => {
   const { projects } = useProjectsViewModel(props);
+  const t = useTranslations('Projects');
 
   return (
     <Section id="projects" className={cn(projectsViewStyles.section())}>
       <div className={cn(projectsViewStyles.header())}>
-        <h2 className={cn(projectsViewStyles.title())}>Projetos em Destaque</h2>
+        <h2 className={cn(projectsViewStyles.title())}>{t('title')}</h2>
         <div className={cn(projectsViewStyles.divider())}></div>
       </div>
 
