@@ -1,13 +1,18 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import { Button } from '@/_shared/components/Button';
 import { cn } from '@/_shared/utils/cn';
 
 import { HeroViewProps } from './HeroView.model';
-import { useHeroViewViewModel } from './HeroView.viewmodel';
+import { getHeroViewViewModel } from './HeroView.viewmodel';
 
-export const HeroView = (props: HeroViewProps) => {
-  const { profile, styles } = useHeroViewViewModel(props);
+export const HeroView = async (props: HeroViewProps) => {
+  const { profile, styles } = await getHeroViewViewModel(props);
+  const locale = await getLocale();
+  console.log(locale);
+  const t = getTranslations('HomePage');
 
   return (
     <section id="home" className={cn(styles.section())}>

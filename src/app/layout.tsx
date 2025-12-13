@@ -2,6 +2,7 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
 
 import { Footer } from '@/_shared/components/Footer';
 import { Navbar } from '@/_shared/components/Navbar';
@@ -57,11 +58,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${roboto.variable} font-sans antialiased`}>
-        <Navbar />
+        <NextIntlClientProvider>
+          <Navbar />
 
-        {children}
+          {children}
 
-        <Footer />
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
