@@ -1,8 +1,10 @@
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 import { INavbarModel } from './Navbar.model';
 
 export const useNavbarViewModel = (props: INavbarModel) => {
+  const t = useTranslations('Navbar.links');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -18,10 +20,10 @@ export const useNavbarViewModel = (props: INavbarModel) => {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Projetos', href: '#projects' },
-    { name: 'Contato', href: '#contact' },
+    { name: t('home'), href: '#home' },
+    { name: t('about'), href: '#about' },
+    { name: t('projects'), href: '#projects' },
+    { name: t('contact'), href: '#contact' },
   ];
 
   return {
