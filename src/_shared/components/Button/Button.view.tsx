@@ -7,7 +7,10 @@ import { buttonVariants } from './Button.styles';
 import { useButtonViewModel } from './Button.viewmodel';
 
 export const Button = (props: IButtonModel) => {
-  const { variant, children, href, ...rest } = useButtonViewModel(props);
+  const { variant, shape, size, iconColor, children, href, className, ...rest } =
+    useButtonViewModel(props);
+
+  const classes = cn(buttonVariants({ variant, shape, size, iconColor }), className);
 
   if (href) {
     const isExternal = href.startsWith('http://') || href.startsWith('https://');
@@ -15,7 +18,7 @@ export const Button = (props: IButtonModel) => {
     return (
       <Link
         href={href}
-        className={cn(buttonVariants({ variant }))}
+        className={classes}
         {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
         {...(rest as Omit<React.ComponentProps<typeof Link>, 'href'>)}
       >
@@ -25,10 +28,7 @@ export const Button = (props: IButtonModel) => {
   }
 
   return (
-    <button
-      className={cn(buttonVariants({ variant }))}
-      {...(rest as React.ButtonHTMLAttributes<HTMLButtonElement>)}
-    >
+    <button className={classes} {...(rest as React.ButtonHTMLAttributes<HTMLButtonElement>)}>
       {children}
     </button>
   );
