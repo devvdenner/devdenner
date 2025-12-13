@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 
-import { Footer } from '@/_shared/components/Footer';
+import { Footer } from '@/_shared/templates/Footer';
 import { Navbar } from '@/_shared/templates/Navbar';
 
 const roboto = Roboto({
