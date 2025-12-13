@@ -1,0 +1,59 @@
+{
+  "Navbar": {
+    "links": {
+      "home": "Início",
+      "about": "Sobre",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "Footer": {
+    "copyright": "Todos os direitos reservados.",
+    "madeWith": "Feito com",
+    "by": "por",
+    "whatsapp": "Conversar no WhatsApp",
+    "resume": "Baixar Currículo"
+  },
+  "Home": {
+    "hero": {
+      "greeting": "Olá, meu nome é",
+      "title": "Denner Nascimento",
+      "subtitle": "Desenvolvedor Frontend",
+      "description": "Desenvolvedor Frontend com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis com React, Next.js, Vue e TypeScript.",
+      "cta": {
+        "contact": "Vamos conversar?",
+        "resume": "Ver Currículo"
+      }
+    }
+  },
+  "About": {
+    "title": "Sobre Mim",
+    "bio": "Comecei minha jornada na programação através do design. Desde então, aprendi a amar o processo de construir coisas do zero. Isso me levou ao desenvolvimento de software, unindo minha paixão por aprendizado contínuo e resolução de problemas complexos."
+  },
+  "Projects": {
+    "title": "Projetos em Destaque"
+  },
+  "Profile": {
+    "role": "Desenvolvedor Frontend",
+    "description": "Desenvolvedor Frontend com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis com React, Next.js, Vue e TypeScript. Atuo com foco em excelência técnica, colaboração e entregas de alto impacto."
+  },
+  "Services": {
+    "frontend": {
+      "title": "Frontend Development",
+      "desc": "Interfaces modernas com React, Next.js e Vue."
+    },
+    "architecture": {
+      "title": "Arquitetura & Boas Práticas",
+      "desc": "Clean Architecture, MVVM e Testes Automatizados."
+    },
+    "mobile": {
+      "title": "Mobile & QA",
+      "desc": "React Native, Cypress, Playwright e Vitest."
+    }
+  },
+  "Stats": {
+    "experience": "Anos de Experiência",
+    "projects": "Projetos Entregues",
+    "companies": "Empresas"
+  }
+}

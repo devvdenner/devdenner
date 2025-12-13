@@ -1,0 +1,59 @@
+{
+  "Navbar": {
+    "links": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  },
+  "Footer": {
+    "copyright": "Todos los derechos reservados.",
+    "madeWith": "Hecho con",
+    "by": "por",
+    "whatsapp": "Chatear en WhatsApp",
+    "resume": "Descargar Currículum"
+  },
+  "Home": {
+    "hero": {
+      "greeting": "Hola, mi nombre es",
+      "title": "Denner Nascimento",
+      "subtitle": "Desarrollador Frontend",
+      "description": "Desarrollador Frontend con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript.",
+      "cta": {
+        "contact": "¿Vamos a hablar?",
+        "resume": "Ver Currículum"
+      }
+    }
+  },
+  "About": {
+    "title": "Sobre Mí",
+    "bio": "Comencé mi viaje en la programación a través del diseño. Desde entonces, aprendí a amar el proceso de construir cosas desde cero. Esto me llevó al desarrollo de software, uniendo mi pasión por el aprendizaje continuo y la resolución de problemas complejos."
+  },
+  "Projects": {
+    "title": "Proyectos Destacados"
+  },
+  "Profile": {
+    "role": "Desarrollador Frontend",
+    "description": "Desarrollador Frontend con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript. Trabajo con enfoque en excelencia técnica, colaboración y entregas de alto impacto."
+  },
+  "Services": {
+    "frontend": {
+      "title": "Desarrollo Frontend",
+      "desc": "Interfaces modernas con React, Next.js y Vue."
+    },
+    "architecture": {
+      "title": "Arquitectura & Buenas Prácticas",
+      "desc": "Clean Architecture, MVVM y Pruebas Automatizadas."
+    },
+    "mobile": {
+      "title": "Mobile & QA",
+      "desc": "React Native, Cypress, Playwright y Vitest."
+    }
+  },
+  "Stats": {
+    "experience": "Años de Experiencia",
+    "projects": "Proyectos Entregados",
+    "companies": "Empresas"
+  }
+}
