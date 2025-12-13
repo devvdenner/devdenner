@@ -8,7 +8,11 @@
     }
   },
   "Footer": {
-    "copyright": "Todos os direitos reservados."
+    "copyright": "Todos os direitos reservados.",
+    "madeWith": "Feito com",
+    "by": "por",
+    "whatsapp": "Conversar no WhatsApp",
+    "resume": "Baixar Currículo"
   },
   "Home": {
     "hero": {

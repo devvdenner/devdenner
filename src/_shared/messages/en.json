@@ -8,7 +8,11 @@
     }
   },
   "Footer": {
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with",
+    "by": "by",
+    "whatsapp": "Chat on WhatsApp",
+    "resume": "Download Resume"
   },
   "Home": {
     "hero": {
