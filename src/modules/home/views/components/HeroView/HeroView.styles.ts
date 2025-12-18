@@ -7,7 +7,7 @@ export const heroStyles = {
   container: cva('mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2'),
   content: cva('animate-fade-in-up space-y-6'),
   greeting: cva('font-mono text-lg font-medium text-primary'),
-  title: cva('text-5xl font-bold leading-tight text-white md:text-7xl'),
+  title: cva('text-5xl font-bold leading-tight text-slate-600 dark:text-white md:text-7xl'),
   titleDot: cva('text-primary'),
   role: cva('text-3xl font-bold text-slate-400 md:text-5xl'),
   description: cva('max-w-md pt-4 text-lg leading-relaxed text-slate-400'),
