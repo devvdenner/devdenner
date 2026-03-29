@@ -2,7 +2,7 @@
   "Navbar": {
     "links": {
       "home": "Inicio",
-      "about": "Sobre mí",
+      "about": "Sobre mi",
       "projects": "Proyectos",
       "contact": "Contacto"
     }
@@ -12,30 +12,51 @@
     "madeWith": "Hecho con",
     "by": "por",
     "whatsapp": "Chatear en WhatsApp",
-    "resume": "Descargar Currículum"
+    "resume": "Descargar Curriculum"
   },
   "Home": {
     "hero": {
       "greeting": "Hola, mi nombre es",
       "title": "Denner Nascimento",
-      "subtitle": "Desarrollador Frontend",
-      "description": "Desarrollador Frontend con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript.",
+      "subtitle": "Ingeniero de Software",
+      "description": "Ingeniero de Software con mas de 5 anos de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript.",
       "cta": {
-        "contact": "¿Vamos a hablar?",
-        "resume": "Ver Currículum"
+        "contact": "Vamos a hablar?",
+        "resume": "Ver Curriculum"
+      },
+      "typedRoles": {
+        "0": "Ingeniero de Software",
+        "1": "Especialista React",
+        "2": "Experto TypeScript",
+        "3": "Arquitecto Frontend"
       }
     }
   },
   "About": {
-    "title": "Sobre Mí",
-    "bio": "Comencé mi viaje en la programación a través del diseño. Desde entonces, aprendí a amar el proceso de construir cosas desde cero. Esto me llevó al desarrollo de software, uniendo mi pasión por el aprendizaje continuo y la resolución de problemas complejos."
+    "title": "Sobre Mi",
+    "bio": "Comence mi viaje en la programacion a traves del diseno. Desde entonces, aprendi a amar el proceso de construir cosas desde cero. Esto me llevo al desarrollo de software, uniendo mi pasion por el aprendizaje continuo y la resolucion de problemas complejos."
   },
   "Projects": {
     "title": "Proyectos Destacados"
   },
+  "Contact": {
+    "subtitle": "Cual es el siguiente paso?",
+    "title": "Vamos a trabajar juntos?",
+    "description": "Actualmente estoy abierto a nuevas oportunidades. Si tienes una pregunta o simplemente quieres saludar, mi bandeja de entrada siempre esta abierta!",
+    "contacts": "Contactos",
+    "form": {
+      "name": "Tu Nombre",
+      "nameLabel": "Nombre",
+      "email": "Tu Email",
+      "emailLabel": "Email",
+      "message": "Tu Mensaje",
+      "messageLabel": "Mensaje",
+      "submit": "Enviar Mensaje"
+    }
+  },
   "Profile": {
-    "role": "Desarrollador Frontend",
-    "description": "Desarrollador Frontend con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript. Trabajo con enfoque en excelencia técnica, colaboración y entregas de alto impacto."
+    "role": "Ingeniero de Software",
+    "description": "Ingeniero de Software con mas de 5 anos de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript. Trabajo con enfoque en excelencia tecnica, colaboracion y entregas de alto impacto."
   },
   "Services": {
     "frontend": {
@@ -43,7 +64,7 @@
       "desc": "Interfaces modernas con React, Next.js y Vue."
     },
     "architecture": {
-      "title": "Arquitectura & Buenas Prácticas",
+      "title": "Arquitectura & Buenas Practicas",
       "desc": "Clean Architecture, MVVM y Pruebas Automatizadas."
     },
     "mobile": {
@@ -52,7 +73,7 @@
     }
   },
   "Stats": {
-    "experience": "Años de Experiencia",
+    "experience": "Anos de Experiencia",
     "projects": "Proyectos Entregados",
     "companies": "Empresas"
   }

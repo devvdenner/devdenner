@@ -1,11 +1,9 @@
 import { HeroViewProps } from './HeroView.model';
 import { heroStyles } from './HeroView.styles';
 
-export const getHeroViewViewModel = async (props: HeroViewProps) => {
-  const { profile } = props;
-
+export const useHeroViewViewModel = (props: HeroViewProps) => {
   return {
-    profile,
+    profile: props.profile,
     styles: heroStyles,
   };
 };

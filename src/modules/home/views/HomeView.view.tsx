@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 
 import { cn } from '@/_shared/utils/cn';
 

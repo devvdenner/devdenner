@@ -1,8 +1,11 @@
 'use client';
 
-import { Menu, X } from 'lucide-react';
+import { List, X } from '@phosphor-icons/react';
 
+import { AnimatePresence, motion } from '@/_shared/adapters/motion';
 import { Link } from '@/_shared/components/Link';
+import { LocaleSwitcher } from '@/_shared/components/LocaleSwitcher';
+import { ThemeToggle } from '@/_shared/components/ThemeToggle';
 import { cn } from '@/_shared/utils/cn';
 
 import { INavbarModel } from './Navbar.model';
@@ -20,34 +23,52 @@ export const Navbar = (props: INavbarModel) => {
           DevDenner<span className="text-primary"> .</span>com
         </Link>
 
-        <div className="hidden space-x-8 md:flex">
+        <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href} variant="nav" className="text-sm">
               {link.name}
             </Link>
           ))}
+
+          <div className="flex items-center gap-2">
+            <LocaleSwitcher />
+            <ThemeToggle />
+          </div>
         </div>
 
-        <button onClick={toggleMenu} className="text-white md:hidden">
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        <button onClick={toggleMenu} className="text-foreground md:hidden">
+          {isMenuOpen ? <X size={28} weight="bold" /> : <List size={28} weight="bold" />}
         </button>
       </div>
 
-      {isMenuOpen && (
-        <div className={mobileMenuVariants()}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={closeMenu}
-              variant="nav"
-              className="text-lg"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      )}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            className={mobileMenuVariants()}
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={closeMenu}
+                variant="nav"
+                className="text-lg"
+              >
+                {link.name}
+              </Link>
+            ))}
+
+            <div className="flex items-center gap-4 pt-4">
+              <LocaleSwitcher />
+              <ThemeToggle />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

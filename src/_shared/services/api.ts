@@ -11,9 +11,9 @@ const profileData: Record<
 > = {
   en: {
     name: 'Denner Nascimento',
-    role: 'Frontend Developer',
+    role: 'Software Engineer',
     description:
-      'Frontend Developer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript. I work with a focus on technical excellence, collaboration, and high-impact deliveries.',
+      'Software Engineer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript. I work with a focus on technical excellence, collaboration, and high-impact deliveries.',
     socials: {
       email: 'contato@devdenner.com',
       linkedin: 'https://www.linkedin.com/in/denner-nascimento/',
@@ -22,9 +22,9 @@ const profileData: Record<
   },
   pt: {
     name: 'Denner Nascimento',
-    role: 'Desenvolvedor Frontend',
+    role: 'Engenheiro de Software',
     description:
-      'Desenvolvedor Frontend com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis com React, Next.js, Vue e TypeScript. Atuo com foco em excelência técnica, colaboração e entregas de alto impacto.',
+      'Engenheiro de Software com mais de 5 anos de experiencia criando interfaces modernas, responsivas e acessiveis com React, Next.js, Vue e TypeScript. Atuo com foco em excelencia tecnica, colaboracao e entregas de alto impacto.',
     socials: {
       email: 'contato@devdenner.com',
       linkedin: 'https://www.linkedin.com/in/denner-nascimento/',
@@ -33,9 +33,9 @@ const profileData: Record<
   },
   es: {
     name: 'Denner Nascimento',
-    role: 'Desarrollador Frontend',
+    role: 'Ingeniero de Software',
     description:
-      'Desarrollador Frontend con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript. Trabajo con enfoque en excelencia técnica, colaboración y entregas de alto impacto.',
+      'Ingeniero de Software con mas de 5 anos de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript. Trabajo con enfoque en excelencia tecnica, colaboracion y entregas de alto impacto.',
     socials: {
       email: 'contato@devdenner.com',
       linkedin: 'https://www.linkedin.com/in/denner-nascimento/',

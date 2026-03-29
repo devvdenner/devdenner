@@ -13,5 +13,5 @@ export const navbarVariants = cva('fixed top-0 z-50 w-full transition-all durati
 });
 
 export const mobileMenuVariants = cva(
-  'absolute left-0 top-full flex w-full flex-col items-center space-y-4 border-t border-slate-700 bg-surface py-6 shadow-2xl md:hidden'
+  'flex flex-col items-center space-y-4 overflow-hidden border-t border-border bg-card py-6 shadow-2xl md:hidden'
 );

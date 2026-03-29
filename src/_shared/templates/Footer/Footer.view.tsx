@@ -1,5 +1,9 @@
-import { Github, Heart, Linkedin, MessageCircle } from 'lucide-react';
+'use client';
 
+import { GithubLogo, Heart, LinkedinLogo, WhatsappLogo } from '@phosphor-icons/react';
+
+import { motion } from '@/_shared/adapters/motion';
+import { AnimatedSection } from '@/_shared/components/AnimatedSection';
 import { Button } from '@/_shared/components/Button';
 import { cn } from '@/_shared/utils/cn';
 
@@ -12,54 +16,59 @@ export const Footer = (props: IFooterModel) => {
 
   return (
     <footer className={cn(footerVariants(), className)} {...rest}>
-      <div className="mx-auto max-w-6xl px-6">
-        {/* Social Links */}
-        <div className="mb-6 flex justify-center space-x-6">
-          <Button
-            href={links.github}
-            variant="icon"
-            shape="rounded"
-            size="icon"
-            iconColor="github"
-            aria-label="GitHub"
-          >
-            <Github size={20} />
-          </Button>
-          <Button
-            href={links.linkedin}
-            variant="icon"
-            shape="rounded"
-            size="icon"
-            iconColor="linkedin"
-            aria-label="LinkedIn"
-          >
-            <Linkedin size={20} />
-          </Button>
-          <Button
-            href={links.whatsapp}
-            variant="icon"
-            shape="rounded"
-            size="icon"
-            iconColor="whatsapp"
-            aria-label="WhatsApp"
-          >
-            <MessageCircle size={20} />
-          </Button>
+      <AnimatedSection direction="up">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-6 flex justify-center space-x-6">
+            <motion.div whileHover={{ scale: 1.15, y: -2 }}>
+              <Button
+                href={links.github}
+                variant="icon"
+                shape="rounded"
+                size="icon"
+                iconColor="github"
+                aria-label="GitHub"
+              >
+                <GithubLogo size={20} weight="bold" />
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.15, y: -2 }}>
+              <Button
+                href={links.linkedin}
+                variant="icon"
+                shape="rounded"
+                size="icon"
+                iconColor="linkedin"
+                aria-label="LinkedIn"
+              >
+                <LinkedinLogo size={20} weight="bold" />
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.15, y: -2 }}>
+              <Button
+                href={links.whatsapp}
+                variant="icon"
+                shape="rounded"
+                size="icon"
+                iconColor="whatsapp"
+                aria-label="WhatsApp"
+              >
+                <WhatsappLogo size={20} weight="bold" />
+              </Button>
+            </motion.div>
+          </div>
+
+          <p className="mb-2 flex items-center justify-center gap-1 text-sm text-muted-foreground">
+            {translations.madeWith}
+            <Heart size={14} weight="fill" className="text-red-500" />
+            {translations.by}
+            <span className="font-medium text-foreground">Denner Nascimento</span>
+          </p>
+
+          <p className="text-center text-xs text-muted-foreground">
+            &copy; {currentYear} DevDenner. {translations.copyright}
+          </p>
         </div>
-
-        {/* Made with love */}
-        <p className="mb-2 flex items-center justify-center gap-1 text-sm text-slate-500">
-          {translations.madeWith}
-          <Heart size={14} className="fill-red-500 text-red-500" />
-          {translations.by}
-          <span className="font-medium text-slate-300">Denner Nascimento</span>
-        </p>
-
-        {/* Copyright */}
-        <p className="text-center text-xs text-slate-600">
-          © {currentYear} DevDenner. {translations.copyright}
-        </p>
-      </div>
+      </AnimatedSection>
     </footer>
   );
 };

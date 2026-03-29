@@ -18,11 +18,17 @@
     "hero": {
       "greeting": "Hello, my name is",
       "title": "Denner Nascimento",
-      "subtitle": "Frontend Developer",
-      "description": "Frontend Developer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript.",
+      "subtitle": "Software Engineer",
+      "description": "Software Engineer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript.",
       "cta": {
         "contact": "Let's talk?",
         "resume": "View Resume"
+      },
+      "typedRoles": {
+        "0": "Software Engineer",
+        "1": "React Specialist",
+        "2": "TypeScript Expert",
+        "3": "Frontend Architect"
       }
     }
   },
@@ -33,9 +39,24 @@
   "Projects": {
     "title": "Featured Projects"
   },
+  "Contact": {
+    "subtitle": "What's next?",
+    "title": "Let's work together?",
+    "description": "I'm currently open to new opportunities. If you have a question or just want to say hi, my inbox is always open!",
+    "contacts": "Contacts",
+    "form": {
+      "name": "Your Name",
+      "nameLabel": "Name",
+      "email": "Your Email",
+      "emailLabel": "Email",
+      "message": "Your Message",
+      "messageLabel": "Message",
+      "submit": "Send Message"
+    }
+  },
   "Profile": {
-    "role": "Frontend Developer",
-    "description": "Frontend Developer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript. I work with a focus on technical excellence, collaboration, and high-impact deliveries."
+    "role": "Software Engineer",
+    "description": "Software Engineer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript. I work with a focus on technical excellence, collaboration, and high-impact deliveries."
   },
   "Services": {
     "frontend": {

@@ -5,6 +5,8 @@ import { Roboto } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 
+import { ThemeProvider } from '@/_shared/components/ThemeProvider';
+import { ThemeTransition } from '@/_shared/components/ThemeTransition';
 import { Locale } from '@/_shared/contracts/locale.contract';
 import { Footer } from '@/_shared/templates/Footer';
 import { Navbar } from '@/_shared/templates/Navbar';
@@ -28,11 +30,11 @@ const metadataByLocale: Record<
   }
 > = {
   en: {
-    title: 'Denner Nascimento | Frontend Developer',
+    title: 'Denner Nascimento | Software Engineer',
     description:
-      'Frontend Developer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript.',
+      'Software Engineer with over 5 years of experience creating modern, responsive, and accessible interfaces with React, Next.js, Vue, and TypeScript.',
     keywords: [
-      'Frontend Developer',
+      'Software Engineer',
       'React',
       'Next.js',
       'TypeScript',
@@ -41,17 +43,17 @@ const metadataByLocale: Record<
       'Denner Nascimento',
     ],
     ogDescription:
-      'Frontend Developer with over 5 years of experience creating modern, responsive, and accessible interfaces.',
+      'Software Engineer with over 5 years of experience creating modern, responsive, and accessible interfaces.',
     twitterDescription:
-      'Frontend Developer with over 5 years of experience creating modern interfaces.',
+      'Software Engineer with over 5 years of experience creating modern interfaces.',
     ogLocale: 'en_US',
   },
   pt: {
-    title: 'Denner Nascimento | Desenvolvedor Frontend',
+    title: 'Denner Nascimento | Engenheiro de Software',
     description:
-      'Desenvolvedor Frontend com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis com React, Next.js, Vue e TypeScript.',
+      'Engenheiro de Software com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis com React, Next.js, Vue e TypeScript.',
     keywords: [
-      'Desenvolvedor Frontend',
+      'Engenheiro de Software',
       'React',
       'Next.js',
       'TypeScript',
@@ -60,17 +62,17 @@ const metadataByLocale: Record<
       'Denner Nascimento',
     ],
     ogDescription:
-      'Desenvolvedor Frontend com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis.',
+      'Engenheiro de Software com mais de 5 anos de experiência criando interfaces modernas, responsivas e acessíveis.',
     twitterDescription:
-      'Desenvolvedor Frontend com mais de 5 anos de experiência criando interfaces modernas.',
+      'Engenheiro de Software com mais de 5 anos de experiência criando interfaces modernas.',
     ogLocale: 'pt_BR',
   },
   es: {
-    title: 'Denner Nascimento | Desarrollador Frontend',
+    title: 'Denner Nascimento | Ingeniero de Software',
     description:
-      'Desarrollador Frontend con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript.',
+      'Ingeniero de Software con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles con React, Next.js, Vue y TypeScript.',
     keywords: [
-      'Desarrollador Frontend',
+      'Ingeniero de Software',
       'React',
       'Next.js',
       'TypeScript',
@@ -79,9 +81,9 @@ const metadataByLocale: Record<
       'Denner Nascimento',
     ],
     ogDescription:
-      'Desarrollador Frontend con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles.',
+      'Ingeniero de Software con más de 5 años de experiencia creando interfaces modernas, responsivas y accesibles.',
     twitterDescription:
-      'Desarrollador Frontend con más de 5 años de experiencia creando interfaces modernas.',
+      'Ingeniero de Software con más de 5 años de experiencia creando interfaces modernas.',
     ogLocale: 'es_ES',
   },
 };
@@ -125,14 +127,17 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${roboto.variable} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
+          <ThemeProvider>
+            <ThemeTransition />
+            <Navbar />
 
-          {children}
+            {children}
 
-          <Footer />
+            <Footer />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
